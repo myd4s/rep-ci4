@@ -29,6 +29,23 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+    <script>
+    function previewImg() {
+        const sampul = document.querySelector('#sampul');
+        const sampulLabel = docmument.querySelector('.custom-file-label');
+        const imgPreview = document.querySelector('.img-preview');
+
+
+        sampulLabel.textContent = sampul.files[0].name;
+
+        const fileSampul = new FileReader();
+        filesampul.readAsDataURL(sampul.files[0]);
+        fileaSampul.onload = function(e) {
+            imgPreview.src = e.target.result;
+        }
+
+    }
+    </script>
 </body>
 
 </html>
